@@ -2,6 +2,57 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
+interface BlogCardProps {
+  imageSrc: string;
+  title: string;
+  description: string;
+  authorImage: string;
+  authorName: string;
+  readTime: string;
+}
+
+const BlogCard: React.FC<BlogCardProps> = ({
+  imageSrc,
+  title,
+  description,
+  authorImage,
+  authorName,
+  readTime,
+}) => (
+  <div className="p-2 border shadow-sm rounded-2xl">
+    <div>
+      <Image
+        src={imageSrc}
+        width={406.27}
+        height={252.5}
+        alt={`${title} image`}
+        className="rounded-xl"
+      />
+    </div>
+    <div className="p-2">
+      <h1 className="text-lg mt-5">{title}</h1>
+      <p className="text-dark-grey">{description}</p>
+      <div className="mt-5 flex justify-between items-center">
+        <div className="flex items-center">
+          <Image
+            src={authorImage}
+            width={25}
+            height={20}
+            alt={`${authorName} image`}
+            className="mr-2"
+          />
+          <p>{authorName}</p>
+        </div>
+        <div className="flex items-end justify-end">
+          <p className="px-2 py-1 border rounded-lg text-dark-grey bg-sec-col">
+            {readTime}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const BlogPage = () => {
   return (
     <div className="h-auto mx-4 lg:mx-40 my-16 lg:my-32 flex flex-col items-center justify-center">
@@ -16,10 +67,12 @@ const BlogPage = () => {
           />
           <div>Our Blogs</div>
         </div>
-        <h1 className="my-6 text-2xl lg:text-4xl text-center">Explore Our Blog</h1>
+        <h1 className="my-6 text-2xl lg:text-4xl text-center">
+          Explore Our Blog
+        </h1>
         <p className="text-center text-dark-grey">
-          Stay updated with the latest trends, tips, and insights on AI-driven code reviews,
-          bug fixes, and development best practices.
+          Stay updated with the latest trends, tips, and insights on AI-driven
+          code reviews, bug fixes, and development best practices.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-10">
@@ -63,38 +116,5 @@ const BlogPage = () => {
     </div>
   );
 };
-
-const BlogCard = ({ imageSrc, title, description, authorImage, authorName, readTime }) => (
-  <div className="p-2 border shadow-sm rounded-2xl">
-    <div>
-      <Image
-        src={imageSrc}
-        width={406.27}
-        height={252.5}
-        alt={`${title} image`}
-        className="rounded-xl"
-      />
-    </div>
-    <div className="p-2">
-      <h1 className="text-lg mt-5">{title}</h1>
-      <p className="text-dark-grey">{description}</p>
-      <div className="mt-5 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image
-            src={authorImage}
-            width={25}
-            height={20}
-            alt={`${authorName} image`}
-            className="mr-2"
-          />
-          <p>{authorName}</p>
-        </div>
-        <div className="flex items-end justify-end">
-          <p className="px-2 py-1 border rounded-lg text-dark-grey bg-sec-col">{readTime}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 export default BlogPage;

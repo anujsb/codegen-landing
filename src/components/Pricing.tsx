@@ -2,6 +2,20 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
+// Define the prop types for the PricingCard component
+interface PricingCardProps {
+  imageSrc: string;
+  planName: string;
+  planTag: string;
+  description: string;
+  price: string;
+  priceInfo?: string; // This prop can be optional
+  buttonText: string;
+  buttonClass?: string; // This prop can be optional
+  arrowSrc: string;
+  features: string[];
+}
+
 const Pricing = () => {
   return (
     <div className="h-auto mx-4 lg:mx-40 my-16 lg:my-32 flex flex-col items-center justify-center">
@@ -22,7 +36,7 @@ const Pricing = () => {
         <p className="text-center text-dark-grey">
           Choose from our flexible pricing options to fit your development needs
           and budget. Start with a free trial and enjoy unlimited access to
-          eacc.dev's powerful features.
+          eacc.dev&apos;s powerful features.
         </p>
       </div>
 
@@ -35,6 +49,7 @@ const Pricing = () => {
           price="$0"
           priceInfo="/month"
           buttonText="Get Started"
+          arrowSrc="/dash-arrow.svg" // Default arrow icon
           features={[
             "AI code reviews on every commit",
             "Bug fixes & code generations",
@@ -49,6 +64,8 @@ const Pricing = () => {
           price="$20"
           priceInfo="/month per developer"
           buttonText="Get Started"
+          buttonClass="bg-black text-white" // Additional class for Pro plan button
+          arrowSrc="/dash-arrow-white.svg" // White arrow icon for Pro plan
           features={[
             "AI code reviews on every commit",
             "Bug fixes & code generations",
@@ -62,6 +79,7 @@ const Pricing = () => {
           description="More customization and support"
           price="Contact us"
           buttonText="Get Started"
+          arrowSrc="/dash-arrow.svg" // Default arrow icon
           features={[
             "Weekly code change",
             "Security documentation",
@@ -73,7 +91,8 @@ const Pricing = () => {
       <div className="bg-security h-auto lg:h-[362px] p-8 rounded-xl text-white flex flex-col justify-center mt-10 w-full">
         <h1 className="text-2xl lg:text-3xl">Get Your 14 Days Free Trial</h1>
         <p className="mt-2">
-          Start exploring SAP risk-free with our 14-day free trial offer today
+          Start exploring SAP risk-free with our 14-day free trial offer today{" "}
+          <br />
           and experience seamless project management firsthand.
         </p>
         <div className="mt-4">
@@ -93,7 +112,7 @@ const Pricing = () => {
   );
 };
 
-const PricingCard = ({
+const PricingCard: React.FC<PricingCardProps> = ({
   imageSrc,
   planName,
   planTag,
@@ -101,6 +120,8 @@ const PricingCard = ({
   price,
   priceInfo,
   buttonText,
+  buttonClass, // Accept additional class as a prop
+  arrowSrc, // Accept arrow image source as a prop
   features,
 }) => (
   <div className="p-4 bg-white rounded-2xl border flex flex-col shadow-sm">
@@ -122,10 +143,14 @@ const PricingCard = ({
     <p className="flex items-center mt-4 text-light-grey-bg">
       <span className="text-3xl text-black px-1">{price}</span> {priceInfo}
     </p>
-    <Button className="mt-4 bg-light-grey-2 text-black border hover:bg-5black shadow-sm">
+    <Button
+      className={`mt-4 bg-light-grey-2 text-black border hover:bg-5black shadow-sm ${
+        buttonClass || ""
+      }`}
+    >
       {buttonText}
       <Image
-        src="/dash-arrow.svg"
+        src={arrowSrc}
         width={15}
         height={15}
         alt="arrow icon"

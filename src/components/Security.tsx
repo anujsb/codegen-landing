@@ -20,7 +20,7 @@ const Security = () => {
           Built with security in mind
         </h1>
         <p className="text-dark-grey">
-          We are committed to ensuring your code's safety and providing clear,
+          We are committed to ensuring your code&apos;s safety and providing clear,
           reliable AI-powered assistance.
         </p>
       </div>

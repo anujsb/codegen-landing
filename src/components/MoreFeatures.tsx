@@ -1,7 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
-const FeatureCard = ({ icon, title, description }) => (
+interface FeatureCardProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description,
+}) => (
   <div className="flex flex-col justify-center bg-sec-col p-4 border shadow-sm rounded-2xl w-full lg:w-[555px] h-[156px]">
     <div className="flex items-center">
       <div className="p-2 bg-light-lavender rounded-2xl border mr-4">

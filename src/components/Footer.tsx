@@ -48,7 +48,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between items-start mt-10 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-10">
+        <div className="flex flex-row justify-between items-start mt-10 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-10">
           <div className="flex flex-col  justify-start items-start">
             <Button variant="link" className="text-light-grey">
               Home
