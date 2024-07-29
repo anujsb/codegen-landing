@@ -16,14 +16,21 @@ const Security = () => {
           />
           <div>Our Values</div>
         </div>
-        <h1 className="my-6 text-2xl lg:text-4xl">Built with security in mind</h1>
-        <p className="text-dark-grey">We are committed to ensuring your code's safety and providing clear, reliable AI-powered assistance.</p>
+        <h1 className="my-6 text-2xl lg:text-4xl">
+          Built with security in mind
+        </h1>
+        <p className="text-dark-grey">
+          We are committed to ensuring your code's safety and providing clear,
+          reliable AI-powered assistance.
+        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 w-full">
-        <div className="bg-security p-8 rounded-xl text-white flex flex-col justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 ">
+        <div className="bg-security max-w-[549px] p-8 rounded-xl text-white flex flex-col justify-center">
           <h1 className="text-2xl lg:text-3xl">SOC II Certified</h1>
           <p className="mt-2">
-            eacc.dev is SOC II Type I certified, ensuring top-tier security for your code. To request a copy of our report, please email team@eacc.dev or schedule a call with a founder.
+            eacc.dev is SOC II Type I certified, ensuring top-tier security for
+            your code. To request a copy of our report, please email
+            team@eacc.dev or schedule a call with a founder.
           </p>
           <div className="mt-4 flex flex-wrap">
             <Button
@@ -54,10 +61,12 @@ const Security = () => {
             </Button>
           </div>
         </div>
-        <div className="bg-security p-8 rounded-xl text-white flex flex-col justify-center">
+        <div className="bg-security max-w-[549px] p-8 rounded-xl text-white flex flex-col justify-center">
           <h1 className="text-2xl lg:text-3xl">No Rogue Commits</h1>
           <p className="mt-2">
-            eacc.dev will never commit code without your explicit permission. You can configure eacc.dev to raise a side-PR, ensuring all changes are transparent and manageable.
+            eacc.dev will never commit code without your explicit permission.
+            You can configure eacc.dev to raise a side-PR, ensuring all changes
+            are transparent and manageable.
           </p>
           <div className="mt-4">
             <Button

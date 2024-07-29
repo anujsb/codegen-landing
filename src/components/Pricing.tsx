@@ -16,14 +16,17 @@ const Pricing = () => {
           />
           <div>Our Pricing</div>
         </div>
-        <h1 className="my-6 text-2xl lg:text-4xl text-center">Our Pricing Plans</h1>
+        <h1 className="my-6 text-2xl lg:text-4xl text-center">
+          Our Pricing Plans
+        </h1>
         <p className="text-center text-dark-grey">
-          Choose from our flexible pricing options to fit your development needs and budget.
-          Start with a free trial and enjoy unlimited access to eacc.dev's powerful features.
+          Choose from our flexible pricing options to fit your development needs
+          and budget. Start with a free trial and enjoy unlimited access to
+          eacc.dev's powerful features.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 w-full">
         <PricingCard
           imageSrc="/bill-free.svg"
           planName="Free Plan"
@@ -35,7 +38,7 @@ const Pricing = () => {
           features={[
             "AI code reviews on every commit",
             "Bug fixes & code generations",
-            "Question & answer functionality"
+            "Question & answer functionality",
           ]}
         />
         <PricingCard
@@ -49,7 +52,7 @@ const Pricing = () => {
           features={[
             "AI code reviews on every commit",
             "Bug fixes & code generations",
-            "Question & answer functionality"
+            "Question & answer functionality",
           ]}
         />
         <PricingCard
@@ -62,16 +65,16 @@ const Pricing = () => {
           features={[
             "Weekly code change",
             "Security documentation",
-            "Priority support, with SLA"
+            "Priority support, with SLA",
           ]}
         />
       </div>
 
-      <div className="bg-security h-auto lg:h-[362px] p-8 rounded-xl text-white flex flex-col justify-center mt-10">
+      <div className="bg-security h-auto lg:h-[362px] p-8 rounded-xl text-white flex flex-col justify-center mt-10 w-full">
         <h1 className="text-2xl lg:text-3xl">Get Your 14 Days Free Trial</h1>
         <p className="mt-2">
-          Start exploring SAP risk-free with our 14-day free trial offer today and experience
-          seamless project management firsthand.
+          Start exploring SAP risk-free with our 14-day free trial offer today
+          and experience seamless project management firsthand.
         </p>
         <div className="mt-4">
           <Button className="bg-10white border border-40white shadow-sm">
@@ -90,7 +93,16 @@ const Pricing = () => {
   );
 };
 
-const PricingCard = ({ imageSrc, planName, planTag, description, price, priceInfo, buttonText, features }) => (
+const PricingCard = ({
+  imageSrc,
+  planName,
+  planTag,
+  description,
+  price,
+  priceInfo,
+  buttonText,
+  features,
+}) => (
   <div className="p-4 bg-white rounded-2xl border flex flex-col shadow-sm">
     <Image
       src={imageSrc}

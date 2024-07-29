@@ -15,9 +15,10 @@ const HowItWorks = () => {
           />
           <div>Learn To Use</div>
         </div>
-        <h1 className="my-6 text-2xl lg:text-4xl">Elevate Your Projects with SAP</h1>
+        <h1 className="my-6 text-2xl lg:text-4xl">How it works</h1>
         <p className="text-dark-grey">
-          Start with eacc.dev: Connect your GitHub/GitLab, index repositories, and streamline code reviews and bug fixes with our flexible API.
+          Start with eacc.dev: Connect your GitHub/GitLab, index repositories,
+          and streamline code reviews and bug fixes with our flexible API.{" "}
         </p>
       </div>
     </div>
