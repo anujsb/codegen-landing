@@ -5,7 +5,7 @@ const FeatureCard = ({ title, description }) => (
   <div className="bg-sec-col p-4 border shadow-sm rounded-2xl w-full lg:w-[428.27px] h-[386px]">
     <div className="flex flex-row items-center">
       <div className="mr-4">
-        <h1 className="text-2xl">{title}</h1>
+        <h1 className="text-xl">{title}</h1>
         <p className="text-dark-grey">{description}</p>
       </div>
       <div className="p-4 bg-light-lavender rounded-full border">
@@ -29,11 +29,11 @@ const KeyFeatures = () => {
       description: "Detect errors, enhance security, and enforce style guides automatically."
     },
     {
-      title: "Generating Working, Tested Code",
+      title: "Cloud-Based",
       description: "Run reviews and fixes in the cloud for seamless processing."
     },
     {
-      title: "Generating Working, Tested Code",
+      title: "Feedback-Driven Improvements",
       description: "Refine suggestions based on team feedback with thumbs up/down ratings."
     },
   ];

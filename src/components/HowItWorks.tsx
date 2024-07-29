@@ -21,6 +21,7 @@ const HowItWorks = () => {
           and streamline code reviews and bug fixes with our flexible API.{" "}
         </p>
       </div>
+      <div>video</div>
     </div>
   );
 };

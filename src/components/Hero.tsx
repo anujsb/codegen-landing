@@ -89,7 +89,7 @@ const Hero = () => {
         </div>
         <div className="flex items-center justify-center md:justify-end mt-4 md:mt-0">
           <Image
-            src="/Real-timeCollaboration.svg"
+            src="/.svg"
             width={300}
             height={300}
             alt="image"
