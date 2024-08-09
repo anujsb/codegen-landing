@@ -68,6 +68,12 @@
   }
 }
 
+
+* {
+  scroll-behavior: smooth;
+}
+
+
 .pri-grad-light {
   background: linear-gradient(#8290eb, #6072e5);
   -webkit-background-clip: text;

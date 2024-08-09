@@ -51,7 +51,7 @@ const KeyFeatures = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 my-16 lg:my-32 flex flex-col items-center justify-center">
+    <div id="key-features" className="container mx-auto px-4 my-16 lg:my-32 flex flex-col items-center justify-center">
       <div className="w-full lg:w-2/4 flex flex-col items-center justify-center text-center">
         <div className="flex items-center justify-center bg-sec-col border border-5black rounded-full px-2 py-1">
           <Image

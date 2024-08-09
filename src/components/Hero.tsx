@@ -7,14 +7,14 @@ const Hero = () => {
     <div className="bg-hero h-auto w-full">
       <div className="pt-20 md:pt-40 m-5 md:m-10 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <div className="flex items-center justify-center md:justify-start mb-4">
+          <div className="flex items-center justify-center md:justify-start mb-4 text-light-grey-bg">
             backed by
             <Image
               src="/ycom.png"
               width={131.39}
               height={24.11}
               alt="ycom"
-              className="mx-2 p-1 border rounded-md"
+              className="mx-2 px-2 py-1 border rounded-md bg-white"
             />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
@@ -89,13 +89,12 @@ const Hero = () => {
         </div>
         <div className="flex items-center justify-center md:justify-end mt-4 md:mt-0">
           <Image
-            src="/.svg"
-            width={300}
-            height={300}
+            src="/home-page.png"
+            width={700}
+            height={400}
             alt="image"
             className="mr-1"
           />
-          image
         </div>
       </div>
     </div>
