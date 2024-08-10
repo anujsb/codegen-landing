@@ -11,7 +11,7 @@ const ContactSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="border rounded-xl p-4 flex flex-col">
           <h1 className="text-xl">Send Us a Message</h1>
-          <p className="mt-2 text-dark-grey">
+          <p className="mt-2 text-dark-grey font-light">
             Use our convenient contact form to reach out with questions,
             feedback, or collaboration inquiries.
           </p>
@@ -53,7 +53,7 @@ const ContactSection = () => {
             </div>
           </div>
           <h1 className="text-3xl mb-2">We&apos;re Here to Help</h1>
-          <p className="text-dark-grey mb-4">
+          <p className="text-dark-grey font-light mb-4">
             Have questions or need assistance? Reach out to our team for
             support, inquiries, or feedback. We&apos;re always ready to assist
             you with any issues or concerns.
@@ -74,7 +74,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h1 className="text-dark-grey">{method.title}</h1>
+                  <h1 className="text-dark-grey font-light">{method.title}</h1>
                   <p>{method.detail}</p>
                 </div>
               </div>

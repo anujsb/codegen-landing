@@ -33,7 +33,7 @@ const Pricing = () => {
         <h1 className="my-6 text-2xl lg:text-4xl text-center">
           Our Pricing Plans
         </h1>
-        <p className="text-center text-dark-grey">
+        <p className="text-center text-dark-grey font-light">
           Choose from our flexible pricing options to fit your development needs
           and budget. Start with a free trial and enjoy unlimited access to
           eacc.dev&apos;s powerful features.
@@ -138,7 +138,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         {planTag}
       </p>
     </div>
-    <p className="mt-2 text-dark-grey">{description}</p>
+    <p className="mt-2 text-dark-grey font-light">{description}</p>
     <div className="border-dashed border-b mt-4" />
     <p className="flex items-center mt-4 text-light-grey-bg">
       <span className="text-3xl text-black px-1">{price}</span> {priceInfo}
@@ -160,7 +160,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div className="mt-4">
       <h1 className="text-pri my-2">Features Included:</h1>
       {features.map((feature, index) => (
-        <div key={index} className="flex my-2 text-dark-grey">
+        <div key={index} className="flex my-2 text-dark-grey font-light">
           <Image
             src="/tick.svg"
             width={25}

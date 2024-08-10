@@ -84,6 +84,12 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        infiniteSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-250px * 5))",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -96,7 +102,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        ["infinite-slider"]: "infiniteSlider 20s linear infinite",
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],

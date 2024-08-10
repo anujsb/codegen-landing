@@ -19,7 +19,7 @@ const HowItWorks = () => {
           <div>Learn To Use</div>
         </div>
         <h1 className="my-6 text-2xl lg:text-4xl">How it works</h1>
-        <p className="text-dark-grey">
+        <p className="text-dark-grey font-light">
           Start with eacc.dev: Connect your GitHub/GitLab, index repositories,
           and streamline code reviews and bug fixes with our flexible API.{" "}
         </p>

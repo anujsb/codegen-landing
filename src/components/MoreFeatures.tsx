@@ -19,7 +19,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
       <h1 className="text-xl mr-4">{title}</h1>
     </div>
-    <p className="text-dark-grey mt-4">{description}</p>
+    <p className="text-dark-grey font-light mt-4">{description}</p>
   </div>
 );
 
@@ -78,7 +78,7 @@ const MoreFeatures = () => {
         <h1 className="my-6 text-2xl lg:text-4xl">
           Beyond just LGTM-as-a-service
         </h1>
-        <p className="text-dark-grey">
+        <p className="text-dark-grey font-light">
           Ellipsis functions as an AI teammate adept at answering questions,
           crafting release notes, developing features, and resolving build
           issues.

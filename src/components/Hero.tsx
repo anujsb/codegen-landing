@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
             <div className="flex flex-row items-center justify-center md:justify-start mt-4 md:mt-12 border rounded-full bg-white shadow-sm m-1 py-1 px-2">
               <Image src="/trusted.svg" width={40} height={20} alt="ycom" />
-              <h1 className="text-dark-grey text-sm">
+              <h1 className="text-dark-grey font-light  text-sm">
                 Trusted by 3k+ Github Members
               </h1>
             </div>
@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-5xl font-semibold text-center md:text-left">
             Revolutionize Your Code Reviews & Bug Fixes with AI
           </h1>
-          <p className="text-dark-grey mt-4 text-lg text-center md:text-left">
+          <p className="text-dark-grey font-light mt-4 text-lg text-center md:text-left">
             Experience faster, smarter, and more secure development with
             eacc.dev, where AI-driven code reviews and automated bug fixes
             streamline your workflow and elevate code quality.
@@ -44,7 +44,7 @@ const Hero = () => {
           <p className="text-sm mt-5 text-center md:text-left">
             Loved by developers at 500+ companies
           </p>
-          <div className="flex flex-wrap justify-center md:justify-start text-dark-grey mt-2">
+          <div className="flex flex-wrap justify-center md:justify-start text-dark-grey font-light mt-2">
             <div className="flex text-sm bg-white border shadow-sm p-1 px-2 rounded-md m-1">
               <Image
                 src="/ResourceAllocation.svg"

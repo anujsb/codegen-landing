@@ -15,7 +15,7 @@ const Footer = () => {
             alt="EACC.dev logo"
             className="rounded-xl mx-auto lg:mx-0"
           />
-          <p className="mt-5">
+          <p className="mt-5 font-light">
             Automate code reviews and bug fixes
             <br /> with EACC.dev. Boost productivity and
             <br /> ensure code quality effortlessly.

@@ -31,7 +31,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
     </div>
     <div className="p-2">
       <h1 className="text-lg mt-5">{title}</h1>
-      <p className="text-dark-grey">{description}</p>
+      <p className="text-dark-grey font-light">{description}</p>
       <div className="mt-5 flex justify-between items-center">
         <div className="flex items-center">
           <Image
@@ -44,7 +44,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <p>{authorName}</p>
         </div>
         <div className="flex items-end justify-end">
-          <p className="px-2 py-1 border rounded-lg text-dark-grey bg-sec-col">
+          <p className="px-2 py-1 border rounded-lg text-dark-grey font-light bg-sec-col">
             {readTime}
           </p>
         </div>
@@ -70,7 +70,7 @@ const BlogPage = () => {
         <h1 className="my-6 text-2xl lg:text-4xl text-center">
           Explore Our Blog
         </h1>
-        <p className="text-center text-dark-grey">
+        <p className="text-center text-dark-grey font-light">
           Stay updated with the latest trends, tips, and insights on AI-driven
           code reviews, bug fixes, and development best practices.
         </p>

@@ -11,7 +11,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => (
     <div className="flex flex-row items-center">
       <div className="mr-4">
         <h1 className="text-xl">{title}</h1>
-        <p className="text-dark-grey">{description}</p>
+        <p className="text-dark-grey font-light">{description}</p>
       </div>
       <div className="">
         <Image
@@ -66,7 +66,7 @@ const KeyFeatures = () => {
         <h1 className="my-6 text-2xl lg:text-4xl">
           Elevate Your Projects with SAP
         </h1>
-        <p className="text-dark-grey">
+        <p className="text-dark-grey font-light">
           Automate code reviews, generate tested solutions, integrate seamlessly
           with Git, and evolve with user feedback—all in one powerful platform
           designed to accelerate your team&apos;s productivity and code quality.
