@@ -36,7 +36,7 @@ const Footer = () => {
                 <Image src="/x.svg" width={25} height={25} alt="X" />
               </div>
             </Link>
-            <Link href="#">
+            {/* <Link href="#">
               <div className="p-2 bg-dark-grey-bg rounded-lg">
                 <Image
                   src="/insta.svg"
@@ -45,7 +45,7 @@ const Footer = () => {
                   alt="Instagram"
                 />
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="flex flex-row justify-between items-start mt-10 ">
@@ -143,9 +143,11 @@ const Footer = () => {
               Privacy Policy
             </Button>
           </Link>
-          <Button variant="link" className="text-dark-grey">
-            Terms & Conditions
-          </Button>
+          <Link href="/tos">
+            <Button variant="link" className="text-dark-grey">
+              Terms & Conditions
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

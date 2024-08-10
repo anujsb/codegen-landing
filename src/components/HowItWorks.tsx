@@ -24,11 +24,10 @@ const HowItWorks = () => {
           and streamline code reviews and bug fixes with our flexible API.{" "}
         </p>
       </div>
-      <div className="w-[1130px] h-[600px] rounded-xl mt-10">
+      <div className="md:w-[1130px] lg:w-[1130px] sm:w-[375px] md:h-[600px] lg:h-[600px] sm:h-[600px] rounded-xl mt-10">
         <iframe
           src="https://www.loom.com/embed/b9ec564cd4d04a6d985c077088794fe6?sid=b6dbae93-f413-4b83-b684-c353fd11ace4"
           frameBorder="0"
-          
           className="w-full h-full rounded-xl"
         ></iframe>
       </div>
