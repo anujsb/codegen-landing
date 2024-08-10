@@ -94,7 +94,7 @@ export const FloatingNav = ({
             ))}
           </div>
           <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg">
-            Start Free Trial
+            Start Free Trial.
           </Button>
           <button
             data-collapse-toggle="navbar-default"
