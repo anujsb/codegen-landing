@@ -13,11 +13,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => (
         <h1 className="text-xl">{title}</h1>
         <p className="text-dark-grey">{description}</p>
       </div>
-      <div className="p-4 bg-light-lavender rounded-full border">
+      <div className="">
         <Image
           src="/featuregrid.svg"
-          width={10}
-          height={10}
+          width={70}
+          height={70}
           alt="feature icon"
         />
       </div>
