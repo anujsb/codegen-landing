@@ -94,14 +94,14 @@ export const FloatingNav = ({
             ))}
           </div>
           <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg">
-            Start Free Trial.
+            Start Free Trial
           </Button>
-          <button
-            data-collapse-toggle="navbar-default"
+          <Button
+            data-collapse-toggle="floating-navbar"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded={isMenuOpen.toString()}
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden bg-sec-col hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  "
+            aria-controls="floating-navbar"
+            aria-expanded={isMenuOpen}
             onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
@@ -120,7 +120,7 @@ export const FloatingNav = ({
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
-          </button>
+          </Button>
         </motion.div>
 
         {/* Modal Drawer for Mobile Navigation */}
