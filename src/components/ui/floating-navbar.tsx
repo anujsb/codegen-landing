@@ -23,11 +23,10 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
@@ -42,6 +41,14 @@ export const FloatingNav = ({
       }
     }
   });
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -59,11 +66,11 @@ export const FloatingNav = ({
             duration: 0.2,
           }}
           className={cn(
-            "flex justify-between mx-10 w-max-[1,120px] fixed top-10 border border-transparent  rounded-2xl  bg-sec-col shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center",
+            "flex justify-between sm:mx-5 md:mx-10 lg:mx-10 w-max-[1,120px] fixed top-10 border border-transparent rounded-2xl bg-sec-col shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-5 py-2 items-center",
             className
           )}
         >
-          <div className="">
+          <div className="mr-3">
             <Image
               src="/logo.svg"
               width={30}
@@ -72,13 +79,13 @@ export const FloatingNav = ({
               className=""
             />
           </div>
-          <div className="flex space-x-4 text-[#404040]  hover:text-black mx-20">
+          <div className="hidden sm:flex space-x-4 text-[#404040] hover:text-black mx-20">
             {navItems.map((navItem: any, idx: number) => (
               <Link
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  "relative items-center flex space-x-4 text-[#404040]  hover:text-black"
+                  "relative items-center flex space-x-4 text-[#404040] hover:text-black"
                 )}
               >
                 <span className="block sm:hidden">{navItem.icon}</span>
@@ -86,10 +93,77 @@ export const FloatingNav = ({
               </Link>
             ))}
           </div>
-          <Button className="mr-0 md:mr-4 mb-4 md:mb-0 black-grad-radial shadow-inner border rounded-lg">
+          <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg">
             Start Free Trial
           </Button>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded={isMenuOpen.toString()}
+            onClick={toggleMenu}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
         </motion.div>
+
+        {/* Modal Drawer for Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <>
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "tween", duration: 0.3 }}
+                className="fixed top-0 right-0 bottom-0 w-64 bg-white z-[6000] p-6 shadow-lg"
+              >
+                <button
+                  onClick={closeMenu}
+                  className="text-right text-gray-500 hover:text-gray-800 mb-6"
+                >
+                  Close
+                </button>
+                <div className="flex flex-col space-y-4">
+                  {navItems.map((navItem: any, idx: number) => (
+                    <Link
+                      key={`mobile-link-${idx}`}
+                      href={navItem.link}
+                      className="text-gray-800 hover:text-black text-lg"
+                      onClick={closeMenu}
+                    >
+                      {navItem.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed inset-0 bg-black z-[5000]"
+                onClick={closeMenu}
+              />
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </AnimatePresence>
   );
