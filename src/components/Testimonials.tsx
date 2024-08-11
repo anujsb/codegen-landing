@@ -2,25 +2,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const testimonials = [
+const testimonials1 = [
   {
-    heading: "1",
+    heading: "A Game Changer for Code Quality",
     content:
-      "Integrating eacc.dev with our GitHub was seamless, and the immediate improvement in code quality was remarkable.",
-    name: "John Doe",
-    role: "CTO at FutureTech",
+      "eacc.dev has transformed our code review process, catching errors we missed and speeding up our workflow.",
+    name: "Jane Smith",
+    role: "Software Engineer at TechCorp",
     href: "https://x.com/",
   },
   {
-    heading: "2",
+    heading: "Saves Time and Boosts Productivity",
     content:
-      "Integrating eacc.dev with our GitHub was seamless, and the immediate improvement in code quality was remarkable.",
+      "With eacc.dev, our team spends less time on manual reviews and more time on innovative development.",
     name: "John Doe",
-    role: "CTO at FutureTech",
+    role: "Lead Developer at Innovate",
     href: "https://x.com/",
   },
   {
-    heading: "3",
+    heading: "Effortless Integration & Results",
     content:
       "Integrating eacc.dev with our GitHub was seamless, and the immediate improvement in code quality was remarkable.",
     name: "John Doe",
@@ -29,6 +29,34 @@ const testimonials = [
   },
   // Add more testimonials as needed
 ];
+const testimonials2 = [
+  {
+    heading: "A Game Changer for Code Quality",
+    content:
+      "eacc.dev has transformed our code review process, catching errors we missed and speeding up our workflow.",
+    name: "Jane Smith",
+    role: "Software Engineer at TechCorp",
+    href: "https://x.com/",
+  },
+  {
+    heading: "Saves Time and Boosts Productivity",
+    content:
+      "With eacc.dev, our team spends less time on manual reviews and more time on innovative development.",
+    name: "John Doe",
+    role: "Lead Developer at Innovate",
+    href: "https://x.com/",
+  },
+  {
+    heading: "Effortless Integration & Results",
+    content:
+      "Integrating eacc.dev with our GitHub was seamless, and the immediate improvement in code quality was remarkable.",
+    name: "John Doe",
+    role: "CTO at FutureTech",
+    href: "https://x.com/",
+  },
+  // Add more testimonials as needed
+];
+
 
 const Testimonials: React.FC = () => {
   return (
@@ -58,7 +86,7 @@ const Testimonials: React.FC = () => {
         <div className="mt-10">
           <div className="relative m-auto w-[1000px] overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']">
             <div className="animate-infinite-slider-forward slide-forward flex w-[calc(384px*10)]">
-              {testimonials.map((testimonial, index) => (
+              {testimonials1.map((testimonial, index) => (
                 <Link href={testimonial.href} key={`testimonial-${index}`}>
                   <div className="border rounded-2xl text-start w-96 mx-2">
                     <div className="bg-sec-col p-6 m-2 rounded-xl">
@@ -92,7 +120,7 @@ const Testimonials: React.FC = () => {
                   </div>
                 </Link>
               ))}
-              {testimonials.map((testimonial, index) => (
+              {testimonials1.map((testimonial, index) => (
                 <Link
                   href={testimonial.href}
                   key={`testimonial-duplicate-${index}`}
@@ -134,7 +162,7 @@ const Testimonials: React.FC = () => {
 
           <div className=" mt-5 relative m-auto w-[1000px] overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']">
             <div className="animate-infinite-slider-reverse slide-reverse flex w-[calc(384px*10)]">
-              {testimonials.map((testimonial, index) => (
+              {testimonials2.map((testimonial, index) => (
                 <Link href={testimonial.href} key={`testimonial-${index}`}>
                   <div className="border rounded-2xl text-start w-96 mx-2">
                     <div className="bg-sec-col p-6 m-2 rounded-xl">
@@ -168,7 +196,7 @@ const Testimonials: React.FC = () => {
                   </div>
                 </Link>
               ))}
-              {testimonials.map((testimonial, index) => (
+              {testimonials2.map((testimonial, index) => (
                 <Link
                   href={testimonial.href}
                   key={`testimonial-duplicate-${index}`}
